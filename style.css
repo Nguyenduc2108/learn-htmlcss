@@ -61,6 +61,9 @@ body {
     #784ba0 50%,
     #2b86c5 100%
   );
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
 
   display: flex;
   align-items: center;
@@ -69,8 +72,15 @@ body {
 
 .list-link {
   display: block;
-  padding: 8px 16px;
+  padding: 20px 24px;
   font-size: 24px;
   text-decoration: none;
   color: #fff;
+}
+
+.list-link:hover {
+  color: #ff3cac;
+  scale: 1.2;
+  transition-property: scale, color;
+  transition: 0.2s linear;
 }
