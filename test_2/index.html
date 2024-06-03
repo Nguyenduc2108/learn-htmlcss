@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
     <body>
-        <header class="header">
+        <header class="header fixed">
             <div class="content">
                 <nav class="navbar">
                     <a href="#!" class="logo">
@@ -26,7 +26,7 @@
                     </a>
 
                     <ul>
-                        <li>
+                        <li class="active">
                             <a href="#!">Home</a>
                         </li>
                         <li>
@@ -110,7 +110,7 @@
                             </p>
                             <div class="actions">
                                 <a href="#!" class="btn">See Courses</a>
-                                <a href="#!" class="watch">
+                                <button href="#!" class="watch">
                                     <div class="img-bg">
                                         <img
                                             src="./assets/icon/play.svg"
@@ -118,7 +118,7 @@
                                         />
                                     </div>
                                     <span>Watch Video</span>
-                                </a>
+                                </button>
                             </div>
                             <p class="describe desc">Recent engagement</p>
                             <div class="hero-qty">
@@ -142,30 +142,57 @@
                         the next future career.
                     </p>
                     <div class="arrow-group">
-                        <div class="img-wrap">
-                            <img
-                                src="./assets/icon/chevron-left.svg"
-                                alt="Arrow left"
-                            />
-                        </div>
-                        <div class="img-wrap active">
-                            <img
-                                src="./assets/icon/chevron-right.svg"
-                                alt="Arrow right"
-                            />
-                        </div>
+                        <button class="img-wrap">
+                            <svg
+                                width="8"
+                                height="14"
+                                viewBox="0 0 8 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7 1L1 7L7 13"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                        <button class="img-wrap">
+                            <svg
+                                width="8"
+                                height="14"
+                                viewBox="0 0 8 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M1 1L7 7L1 13"
+                                    stroke="currentColor
+                                "
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
                     </div>
 
                     <div class="list">
                         <div class="item">
-                            <img
-                                src="./assets/image/course-1.jpg"
-                                alt="Basic web design"
-                                class="img"
-                            />
+                            <a href="#!">
+                                <img
+                                    src="./assets/image/course-1.jpg"
+                                    alt="Basic web design"
+                                    class="img"
+                                />
+                            </a>
                             <div class="body">
                                 <span class="row">
-                                    <h3 class="title">Basic web design</h3>
+                                    <h3 class="title break-all">
+                                        <a href="#!" class="line-clamp">
+                                            Basic web design
+                                        </a>
+                                    </h3>
                                     <p class="star">
                                         <img
                                             src="./assets/icon/Star.svg"
@@ -174,26 +201,32 @@
                                         <span>4.5</span>
                                     </p>
                                 </span>
-                                <p class="desc">
+                                <p class="desc line-clamp line-2 break-all">
                                     Get the best course, gain knowledge and
                                     shine for your future career.
                                 </p>
                                 <span class="row row-coursers">
                                     <p class="price">$120.75</p>
-                                    <a href="#!" class="btn active">Book Now</a>
+                                    <a href="#!" class="btn">Book Now</a>
                                 </span>
                             </div>
                         </div>
 
                         <div class="item">
-                            <img
-                                src="./assets/image/course-2.jpg"
-                                alt="UI/UX design"
-                                class="img"
-                            />
+                            <a href="#!">
+                                <img
+                                    src="./assets/image/course-2.jpg"
+                                    alt="UI/UX design"
+                                    class="img"
+                                />
+                            </a>
                             <div class="body">
                                 <span class="row">
-                                    <h3 class="title">UI/UX design</h3>
+                                    <h3 class="title break-all">
+                                        <a href="#!" class="line-clamp">
+                                            UI/UX design
+                                        </a>
+                                    </h3>
                                     <p class="star">
                                         <img
                                             src="./assets/icon/Star.svg"
@@ -202,7 +235,7 @@
                                         <span>4.5</span>
                                     </p>
                                 </span>
-                                <p class="desc">
+                                <p class="desc line-clamp line-2 break-all">
                                     Get the best course, gain knowledge and
                                     shine for your future career.
                                 </p>
@@ -214,14 +247,20 @@
                         </div>
 
                         <div class="item">
-                            <img
-                                src="./assets/image/course-3.jpg"
-                                alt="Web App design"
-                                class="img"
-                            />
+                            <a href="#!">
+                                <img
+                                    src="./assets/image/course-3.jpg"
+                                    alt="Web App design"
+                                    class="img"
+                                />
+                            </a>
                             <div class="body">
                                 <span class="row">
-                                    <h3 class="title">Web App design</h3>
+                                    <h3 class="title break-all">
+                                        <a href="#!" class="line-clamp">
+                                            Web App design
+                                        </a>
+                                    </h3>
                                     <p class="star">
                                         <img
                                             src="./assets/icon/Star.svg"
@@ -230,7 +269,7 @@
                                         <span>4.5</span>
                                     </p>
                                 </span>
-                                <p class="desc">
+                                <p class="desc line-clamp line-2 break-all">
                                     Get the best course, gain knowledge and
                                     shine for your future career.
                                 </p>
@@ -280,7 +319,7 @@
                     <div class="row">
                         <div class="img-block">
                             <img
-                                class="img"
+                                class="lower"
                                 src="./assets/image/features-1.jpg"
                                 alt="Learner outcomes through our awesome platform"
                             />
@@ -304,9 +343,9 @@
                     </div>
                 </div>
             </div>
-            <div class="features">
+            <div class="features features-2">
                 <div class="content">
-                    <div class="row row-reverse">
+                    <div class="row">
                         <div class="img-block">
                             <img
                                 src="./assets/image/features-3.jpg"
@@ -341,6 +380,36 @@
                         <div class="item">
                             <img
                                 src="./assets/image/blog-1.jpg"
+                                alt=""
+                                class="img"
+                            />
+                            <p class="time">21 November 2021</p>
+                            <div class="body">
+                                <h3 class="heading">
+                                    How to become a pro web designer in 2022 and
+                                    get remot job?
+                                </h3>
+                                <a href="#!" class="btn">Read More</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img
+                                src="./assets/image/blog-2.jpg"
+                                alt=""
+                                class="img"
+                            />
+                            <p class="time">21 November 2021</p>
+                            <div class="body">
+                                <h3 class="heading">
+                                    How to become a pro web designer in 2022 and
+                                    get remot job?
+                                </h3>
+                                <a href="#!" class="btn">Read More</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img
+                                src="./assets/image/blog-3.jpg"
                                 alt=""
                                 class="img"
                             />
@@ -478,18 +547,21 @@
                         <ul>
                             <li>
                                 <a href="#!">
-                                    <span>Location</span>: 27 Division St, New
-                                    York, NY 10002, USA</a
+                                    <strong>Location</strong>: 27 Division St,
+                                    New York, NY 10002, USA</a
                                 >
                             </li>
                             <li>
-                                <a href="#!"
-                                    ><span>Email</span>: email@gmail.com</a
+                                <a href="mailto:email@gmail.com"
+                                    ><strong>Email</strong>: email@gmail.com</a
                                 >
                             </li>
                             <li>
-                                <a href="#!"
-                                    ><span>Phone</span>: + 000 1234 567 890</a
+                                <a
+                                    href="tel: + 000 1234 567
+                                890"
+                                    ><strong>Phone</strong>: + 000 1234 567
+                                    890</a
                                 >
                             </li>
                         </ul>
