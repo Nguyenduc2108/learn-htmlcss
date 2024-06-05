@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2e80ce;
+    --heading-color: #10375c;
+    --text-color: #575f66;
+
+    --sub-font: "Inter", sans-serif;
+    --footer-font: "Open Sans", sans-serif;
+
+    --width-app: 1170px;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Sora", sans-serif;
+}
