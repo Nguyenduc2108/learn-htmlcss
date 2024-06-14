@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>table</title>
+        <!-- <style>
+            /* .remember {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+            .remember::before {
+                content: "";
+                display: inline-block;
+                width: 13px;
+                height: 13px;
+                border: 1px solid #000;
+                border-radius: 4px;
+                margin-right: 10px;
+            }
+
+            input[type="checkbox"]:checked ~ .remember::before {
+                background-color: red;
+            }
+            input[type="checkbox"]:checked ~ .remember::after {
+                position: absolute;
+                left: 1px;
+                top: 6px;
+                content: "";
+                display: inline-block;
+                width: 9px;
+                height: 4px;
+                border-left: 2px solid #000;
+                border-bottom: 2px solid #000;
+                rotate: -45deg;
+            }
+
+            .name {
+                position: relative;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .name::before {
+                content: "";
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 1px solid red;
+                margin-right: 8px;
+            }
+
+            input[type="radio"]:checked ~ .name::before {
+                background-color: red;
+            }
+
+            input[type="radio"]:checked ~ .name::after {
+                position: absolute;
+                left: 3px;
+                top: 6px;
+                content: "";
+                display: inline-block;
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background-color: #fff;
+            } */
+            label {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 30px;
+                border-radius: 99px;
+                outline: 3px solid #e8e8e8;
+                background-color: #f9f9f9;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+            label::before {
+                content: "";
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #fff;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+                position: relative;
+                transition: 0.2s;
+            }
+            input[type="checkbox"]:checked ~ label::before {
+                transform: translateX(30px);
+            }
+            input[type="checkbox"]:checked ~ label {
+                background: rgb(55, 232, 55);
+                outline-color: rgb(55, 232, 55);
+            }
+            label::after {
+                content: "OFF";
+                position: absolute;
+                right: 4%;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 14px;
+                transition: 0.2s;
+            }
+
+            input[type="checkbox"]:checked ~ label::after {
+                content: "ON";
+                top: 50%;
+                transform: translateX(-180%) translateY(-50%);
+            }
+        </style> -->
+
+        <!-- <style>
+            .form:has(:invalid) .submit-btn {
+                opacity: 0.5;
+                pointer-events: none;
+            }
+            .form-row {
+                display: flex;
+                gap: 32px;
+                margin-bottom: 32px;
+            }
+            .form-group:focus-within .form-label {
+                color: #5f42b6;
+            }
+            .form-group:focus-within .form-input {
+                border-color: #5f42b6;
+            }
+            .form-group:has(:invalid:not(:placeholder-shown)) .form-error {
+                display: block;
+            }
+            .form-label,
+            .form-input {
+                display: block;
+            }
+            .form-label {
+                font-size: 11px;
+                font-weight: 700;
+                color: #131434;
+            }
+            .form-input,
+            .form-textarea {
+                width: 100%;
+                padding: 8px 0 14px 0;
+                outline: none;
+                border: none;
+                border-bottom: solid #ccc;
+                color: #0d3dcd;
+            }
+            .form-input::placeholder,
+            .form-textarea::placeholder {
+                color: #bebfc9;
+            }
+            .form-textarea {
+                resize: none;
+            }
+            .form-error {
+                font-size: 13px;
+                color: red;
+                display: none;
+            }
+            .radio-btn {
+                display: inline-block;
+            }
+            .radio-btn label {
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-left: 8px;
+            }
+            .radio-btn label:first-of-type {
+                margin-left: 0;
+            }
+            .radio-btn label::before {
+                content: "";
+                display: block;
+                width: 14px;
+                height: 14px;
+                margin-right: 4px;
+                border-radius: 50%;
+                border: 1px solid #ccc;
+                background: #fff;
+            }
+            input[type="radio"] {
+                display: none;
+            }
+            input[type="radio"]:checked ~ label::before {
+                background: #5f42b6;
+                border-color: #5f42b6;
+            }
+            input[type="radio"]:checked ~ label::after {
+                content: "";
+                position: absolute;
+                left: 1px;
+                top: 4px;
+                display: block;
+                width: 10px;
+                height: 5px;
+                border-left: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                transform: rotate(-45deg);
+            }
+            .submit-box {
+                justify-content: flex-start;
+            }
+            .submit-btn {
+                min-width: 160px;
+                height: 50px;
+                line-height: 50px;
+                background: #5f42b6;
+                color: #fff;
+                outline: none;
+                border: none;
+                border-radius: 8px;
+            }
+            .submit-btn:hover {
+                opacity: 0.9;
+            }
+        </style> -->
+
+        <!-- <style>
+            p {
+                display: block;
+                background-image: linear-gradient(
+                    to right,
+                    orange 50%,
+                    #000 50%
+                );
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-size: 200% 100%;
+                background-position: right top;
+                transition: 0.5s;
+            }
+            p:hover {
+                background-position: left top;
+            }
+        </style> -->
+
+        <!-- <style>
+            .loading {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                width: 40px;
+                height: 40px;
+                z-index: 99;
+            }
+
+            .loading.inner {
+                position: absolute;
+            }
+
+            .loading::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                border: 3px solid;
+                border-color: red transparent green yellow;
+                animation: spinner 1s linear infinite;
+            }
+            .loading[data-text]::after {
+                content: attr(data-text);
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                translate: -50%;
+                font-size: 12px;
+                color: #000;
+                white-space: nowrap;
+            }
+
+            .box {
+                position: relative;
+                width: 300px;
+                height: 150px;
+                background: #ccc;
+            }
+
+            @keyframes spinner {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style> -->
+
+        <style>
+            .loading {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                width: 40px;
+                height: 40px;
+                z-index: 99;
+            }
+
+            .loading.inner {
+                position: absolute;
+            }
+            .loading::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                border: 3px solid;
+                border-color: red transparent green yellow;
+                animation: spinner 1s linear infinite;
+            }
+            .loading[data-text]::after {
+                content: attr(data-text);
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                translate: -50%;
+                font-size: 12px;
+                white-space: nowrap;
+            }
+
+            @keyframes spinner {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .box {
+                position: relative;
+                width: 300px;
+                height: 300px;
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <form action="">
+            <a href="" target="_blank" rel="noopener noreferrer"></a>
+        </form>
+        <input type="checkbox" name="" id="a" hidden />
+        <label class="remember" for="a">Remember</label>
+
+        <div>
+            <input type="radio" name="" id="b" />
+            <label class="name" for="b">Nam</label>
+        </div> -->
+        <!-- <div>
+            <input type="checkbox" name="" id="a" hidden />
+            <label for="a"></label>
+        </div> -->
+
+        <!-- <form method="POST" action="" class="form" autocomplete="off">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first-name" class="form-label">
+                        First Name
+                    </label>
+                    <input
+                        type="text"
+                        id="first-name"
+                        name="first-name"
+                        class="form-input"
+                        placeholder="Enter fist name"
+                        required
+                        minlength="2"
+                    />
+                    <p class="form-error">Nhập ít thất 2 ký tự</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name" class="form-label">
+                        Last Name
+                    </label>
+                    <input
+                        type="text"
+                        id="last-name"
+                        name="last-name"
+                        class="form-input"
+                        placeholder="Enter last name"
+                        required
+                        minlength="2"
+                    />
+                    <p class="form-error">Nhập ít thất 2 ký tự</p>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email" class="form-label">Mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-input"
+                        placeholder="Enter email"
+                        required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    />
+                    <p class="form-error">Nhập email</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input
+                        type="tel"
+                        id="first-name"
+                        class="form-input"
+                        placeholder="Enter phone"
+                        name="phone"
+                        required
+                        pattern="^(0|\+?84)(3|5|7|8|9)[0-9]{8}$"
+                    />
+                    <p class="form-error">Nhập số điện thoại</p>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="">What the of website do you need?</label>
+                </div>
+
+                <div class="radio-group">
+                    <div class="radio-btn">
+                        <input
+                            type="radio"
+                            name="type"
+                            id="web-design"
+                            value="web-design"
+                            checked
+                        />
+                        <label for="web-design">Web Design</label>
+                    </div>
+                    <div class="radio-btn">
+                        <input
+                            type="radio"
+                            name="type"
+                            id="web-development"
+                            value="web-development"
+                        />
+                        <label for="web-development">Web Development</label>
+                    </div>
+                    <div class="radio-btn">
+                        <input
+                            type="radio"
+                            name="type"
+                            id="logo-design"
+                            value="logo-design"
+                        />
+                        <label for="logo-design">Logo Design</label>
+                    </div>
+                    <div class="radio-btn">
+                        <input
+                            type="radio"
+                            name="type"
+                            id="other"
+                            value="other"
+                        />
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                <p class="form-error">Vui lòng nhập trường này</p>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                        name="message"
+                        class="form-textarea"
+                        id="message"
+                        placeholder="Write your message"
+                        required
+                        minlength="10"
+                    ></textarea>
+                    <p class="form-error">Nhập ít nhất 10 ký tự</p>
+                </div>
+            </div>
+            <div class="form-row submit-box">
+                <button type="submit" class="submit-btn">Send Message</button>
+            </div>
+        </form> -->
+        <!-- <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet velit
+            corrupti eligendi vero saepe perferendis sed laboriosam facere nam
+            quo esse, itaque ipsum commodi eius porro reprehenderit autem
+            dolores iure. Autem veritatis, voluptatibus porro illum omnis aut
+            quidem nihil quibusdam praesentium, velit dolore maiores dignissimos
+            minima pariatur totam fugiat explicabo beatae. Laboriosam fuga
+            incidunt magnam vel. Eaque repellendus, enim rerum quas distinctio
+            ad repellat labore placeat ea autem atque quam vel, sit accusantium
+            nemo aliquid! Omnis sequi ab aut tenetur perspiciatis qui. Hic
+            voluptas quaerat pariatur excepturi eligendi ad suscipit eveniet,
+            iste rem, nihil neque corporis esse quasi sapiente aliquid.
+        </p> -->
+        <!-- <div class="loading" data-text="Loading..."></div>
+        <div class="box">
+            <div class="loading inner" data-text="Đang tải..."></div>
+        </div> -->
+
+        <div class="loading" data-text="Loading..."></div>
+        <div class="box">
+            <div class="loading inner" data-text="dang tai..."></div>
+        </div>
+    </body>
+</html>
