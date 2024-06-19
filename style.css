@@ -86,3 +86,9 @@ body {
     color: #ff3cac;
     scale: 1.1;
 }
+
+@media screen and (max-width: 768px) {
+    .list-item {
+        width: 100%;
+    }
+}
