@@ -160,7 +160,7 @@ a {
 
 .hero-img {
     position: absolute;
-    right: calc((100vw - var(--width-app)) / 2 - 100px);
+    right: calc((100vw - var(--width-app)) / 2 - 85px);
     bottom: 0;
 }
 
