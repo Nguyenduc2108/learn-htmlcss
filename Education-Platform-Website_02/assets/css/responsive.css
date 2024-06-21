@@ -1,0 +1,239 @@
+/* PC */
+@media (min-width: 992px) {
+    .hide-on-pc {
+        display: none;
+    }
+}
+
+/* Mobile vs Tablet */
+@media (max-width: 991.98px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .hero .content-block {
+        width: 80%;
+        padding: 0;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero .cta-group {
+        justify-content: center;
+    }
+
+    .feedback-item blockquote {
+        font-size: 1.8rem;
+    }
+
+    .features .body {
+        flex-direction: column;
+    }
+
+    .features .content {
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .popular .course-item {
+        flex: 1 1 auto;
+    }
+
+    .footer .list {
+        margin-top: 24px;
+    }
+
+    .footer .list li:last-child a {
+        margin-bottom: 12px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .popular .course-list {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .blog .item {
+        width: calc(50% - 15px);
+    }
+
+    .footer .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer .row .column,
+    .footer .row .column:first-child {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header .body {
+        justify-content: space-between;
+    }
+
+    .header-menu {
+        width: 24px;
+    }
+
+    .drawer-menu {
+        position: fixed;
+        inset: 0 0 0 25%;
+        z-index: 2;
+        text-align: right;
+        padding: 40px;
+        background: #fff;
+        transform: translateX(100%);
+        transition: transform 0.3s linear;
+    }
+
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s linear;
+        transition-property: opacity, visibility;
+    }
+
+    .menu-checkbox:checked ~ .overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-checkbox:checked ~ .drawer-menu {
+        transform: translateX(0);
+    }
+
+    .drawer-menu .menu-list {
+        margin-top: 40px;
+    }
+
+    .menu-link {
+        display: block;
+        padding: 14px;
+        color: #171100;
+        font-weight: 500;
+    }
+
+    .separate {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .heading.lv1 {
+        font-size: 4.2rem;
+    }
+
+    .hero .content-block .desc {
+        font-size: 1.7rem;
+    }
+
+    .hero .stats strong {
+        font-size: 3.8rem;
+    }
+
+    .popular-top {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .heading.lv2 {
+        font-size: 3.2rem;
+    }
+
+    .popular-top .desc {
+        width: 100%;
+    }
+
+    .popular-top .controls {
+        margin-top: 32px;
+    }
+
+    .popular .course-list {
+        flex-wrap: wrap;
+    }
+
+    .popular .course-item .desc {
+        font-size: 1.6rem;
+    }
+
+    .feedback .feedback-item {
+        flex-direction: column;
+    }
+
+    .feedback-item .content {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .feedback-item blockquote {
+        font-size: 1.6rem;
+    }
+
+    .features .img-block img {
+        width: 100%;
+    }
+}
+
+/* Mobile Low */
+@media (max-width: 575.98px) {
+    .hero .cta-group {
+        flex-direction: column;
+    }
+
+    .hero .watch-video {
+        margin: 12px 0 0 -9px;
+    }
+
+    .features .content {
+        width: 100%;
+    }
+
+    .blog .blog-top .desc {
+        width: 100%;
+    }
+
+    .blog .item {
+        width: 100%;
+    }
+
+    .blog .item .btn {
+        width: 100%;
+    }
+
+    .footer .row {
+        flex-wrap: wrap;
+    }
+
+    .footer .row .column,
+    .footer .row .column:first-child {
+        width: 100%;
+    }
+
+    .footer .title {
+        margin-top: 20px;
+    }
+
+    .footer .list {
+        margin-top: 12px;
+    }
+
+    .footer .desc {
+        max-width: 100%;
+    }
+}

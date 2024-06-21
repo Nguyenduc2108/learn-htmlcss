@@ -96,6 +96,7 @@
 
         <!-- Style -->
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <!-- Header -->
@@ -112,26 +113,77 @@
                     </a>
 
                     <!-- Navigation -->
-                    <nav class="nav">
-                        <ul>
+                    <nav class="nav hide-on-mobile">
+                        <ul id="pc-nav">
                             <li class="active">
-                                <a href="#!">Home</a>
+                                <a href="#!" class="menu-link">Home</a>
                             </li>
                             <li>
-                                <a href="#!">Courses</a>
+                                <a href="#!" class="menu-link">Courses</a>
                             </li>
                             <li>
-                                <a href="#!">Pricing</a>
+                                <a href="#!" class="menu-link">Pricing</a>
                             </li>
                             <li>
-                                <a href="#!">Reviews</a>
+                                <a href="#!" class="menu-link">Reviews</a>
+                            </li>
+                            <li class="separate"></li>
+                            <li>
+                                <a
+                                    href="#!"
+                                    class="menu-link hide-on-tablet hide-on-pc"
+                                    >Sign Up</a
+                                >
                             </li>
                         </ul>
                     </nav>
 
                     <!-- Action -->
-                    <div class="action">
+                    <div class="action hide-on-mobile">
                         <a href="#!" class="btn sign-up-btn">Sign Up</a>
+                    </div>
+
+                    <!-- Mobile menu -->
+                    <label for="menu-checkbox" class="header-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
+                    <input
+                        type="checkbox"
+                        name=""
+                        id="menu-checkbox"
+                        class="menu-checkbox"
+                        hidden
+                    />
+
+                    <label for="menu-checkbox" class="overlay"></label>
+
+                    <!-- Mobile navigation -->
+                    <div class="drawer-menu hide-on-pc hide-on-tablet">
+                        <!-- Logo -->
+                        <a href="#!">
+                            <img
+                                src="./assets/image/logo.svg"
+                                alt="Lession."
+                                class="menu-logo"
+                            />
+                        </a>
+
+                        <ul id="mobile-nav" class="menu-list"></ul>
+                        <script>
+                            const mobileNav =
+                                document.getElementById("mobile-nav");
+                            const pcNav = document.getElementById("pc-nav");
+
+                            mobileNav.innerHTML = pcNav.innerHTML;
+                        </script>
                     </div>
                 </div>
             </div>
@@ -144,7 +196,7 @@
                 <div class="main-content">
                     <div class="body">
                         <!-- Hero left -->
-                        <div class="media-block">
+                        <div class="media-block hide-on-mobile-tablet">
                             <img
                                 src="./assets/image/hero-img.jpg"
                                 alt="Learn without limits and spread knowledge."
@@ -518,6 +570,7 @@
                             <img
                                 src="./assets/image/features-2.jpg"
                                 alt="Learner outcomes through our awesome platform"
+                                class="hide-on-mobile"
                             />
                         </div>
                         <div class="content">
