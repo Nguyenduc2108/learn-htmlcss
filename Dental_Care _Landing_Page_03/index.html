@@ -94,12 +94,64 @@
         <!-- Style -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <header class="header">
             <div class="container">
                 <!-- Header top -->
                 <div class="header-top">
+                    <label
+                        for="menu-checkbox"
+                        class="header-menu show-on-mobile"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
+                    <input
+                        type="checkbox"
+                        name=""
+                        id="menu-checkbox"
+                        class="menu-checkbox"
+                        hidden
+                    />
+
+                    <label
+                        for="menu-checkbox"
+                        class="overlay show-on-mobile"
+                    ></label>
+
+                    <div class="drawer-menu show-on-mobile">
+                        <!-- Logo -->
+                        <a href="#">
+                            <div class="logo show-on-mobile">
+                                <span class="logo__circle"></span>
+                                <span class="logo__text">
+                                    <span class="logo__brand">shine</span>
+                                    <span
+                                        class="logo__brand logo__brand--small"
+                                    >
+                                        smile
+                                    </span>
+                                </span>
+                            </div>
+                        </a>
+
+                        <!--Mobile Navbar -->
+                        <ul
+                            id="mobile-nav"
+                            class="mobile-nav show-on-mobile"
+                        ></ul>
+                    </div>
+
                     <!-- Logo -->
                     <a href="#">
                         <div class="logo">
@@ -115,32 +167,58 @@
 
                     <!-- Navbar -->
                     <nav class="navbar">
-                        <ul class="navbar__list">
+                        <ul id="pc-nav" class="navbar__list hide-on-mobile">
                             <li class="navbar__item">
                                 <a
                                     href="#"
                                     class="navbar__link navbar__link--active"
-                                    >Home</a
                                 >
+                                    Home
+                                </a>
                             </li>
                             <li class="navbar__item">
-                                <a href="#services" class="navbar__link"
-                                    >Services</a
-                                >
+                                <a href="#services" class="navbar__link">
+                                    Services
+                                </a>
                             </li>
                             <li class="navbar__item">
                                 <a href="#about" class="navbar__link">About</a>
                             </li>
                             <li class="navbar__item">
-                                <a href="#doctors" class="navbar__link"
-                                    >Doctors</a
+                                <a href="#doctors" class="navbar__link">
+                                    Doctors
+                                </a>
+                            </li>
+                            <li class="separate show-on-mobile"></li>
+                            <li class="navbar__item">
+                                <a
+                                    href="#!"
+                                    class="navbar__link show-on-mobile"
                                 >
+                                    Log In
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a
+                                    href="#!"
+                                    class="navbar__link show-on-mobile"
+                                >
+                                    Sign Up
+                                </a>
                             </li>
                         </ul>
+
+                        <script>
+                            const pcNav = document.getElementById("pc-nav");
+                            const mobileNav =
+                                document.getElementById("mobile-nav");
+
+                            mobileNav.innerHTML = pcNav.innerHTML;
+                        </script>
                     </nav>
 
                     <!-- Action -->
-                    <div class="header-action">
+                    <div class="header-action hide-on-mobile">
                         <a href="#!" class="header-action__login">Log In</a>
                         <a href="#!" class="btn header-action__signup"
                             >Sign Up</a
