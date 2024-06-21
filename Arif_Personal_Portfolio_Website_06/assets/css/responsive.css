@@ -1,0 +1,37 @@
+/* PC */
+@media (min-width: 992px) {
+    .hide-on-pc {
+        display: none;
+    }
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+/* Mobile vs Tablet */
+@media (max-width: 991.98px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hide-on-tablet {
+        display: none;
+    }
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+/* Mobile Low */
+@media (max-width: 575.98px) {
+}
