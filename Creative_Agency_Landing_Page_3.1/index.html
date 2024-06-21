@@ -94,6 +94,7 @@
         <!-- Style -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <header class="header fixed">
@@ -104,7 +105,7 @@
                     </a>
 
                     <nav class="nav">
-                        <ul class="nav__list">
+                        <ul id="pc-nav" class="nav__list">
                             <li class="nav__item">
                                 <a href="#" class="nav__link">Home</a>
                             </li>
@@ -121,6 +122,55 @@
                     </nav>
                     <div class="action">
                         <a href="#!" class="btn action__signup">Sign Up</a>
+                    </div>
+
+                    <!-- header menu -->
+                    <label
+                        for="menu-checkbox"
+                        class="header-menu show-on-mobile"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
+                    <input
+                        type="checkbox"
+                        name=""
+                        id="menu-checkbox"
+                        class="menu-checkbox"
+                        hidden
+                    />
+
+                    <label
+                        for="menu-checkbox"
+                        class="overlay show-on-mobile"
+                    ></label>
+
+                    <div class="drawer-menu show-on-mobile">
+                        <a href="#" class="menu-logo show-on-mobile">
+                            <img
+                                src="./assets/images/logo.svg"
+                                alt="MODULARS"
+                            />
+                        </a>
+
+                        <ul
+                            id="mobile-nav"
+                            class="mobile-nav show-on-mobile"
+                        ></ul>
+                        <script>
+                            const mobileNav =
+                                document.getElementById("mobile-nav");
+                            const pcNav = document.getElementById("pc-nav");
+
+                            mobileNav.innerHTML = pcNav.innerHTML;
+                        </script>
                     </div>
                 </div>
             </div>
