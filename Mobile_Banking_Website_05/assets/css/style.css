@@ -47,7 +47,7 @@ button {
 
 .container {
     width: var(--width-app);
-    max-width: 100%;
+    max-width: calc(100% - 48px);
     margin: 0 auto;
 }
 
@@ -250,6 +250,7 @@ button {
     font-size: 16px;
     border: none;
     outline: none;
+    background: transparent;
 }
 
 .hero-form__input::placeholder {

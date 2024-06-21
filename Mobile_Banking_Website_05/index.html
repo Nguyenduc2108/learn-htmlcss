@@ -94,14 +94,57 @@
         <!-- Style -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
 
         <!-- Animation -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+    </head>
+
     <body>
         <!-- header -->
         <header class="header fixed">
             <div class="container">
                 <div class="header__inner">
+                    <!-- header menu -->
+                    <label for="menu-checkbox" class="header-menu hide-on-pc">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
+                    <input
+                        type="checkbox"
+                        name=""
+                        id="menu-checkbox"
+                        class="menu-checkbox"
+                        hidden
+                    />
+
+                    <label
+                        for="menu-checkbox"
+                        class="overlay hide-on-pc"
+                    ></label>
+
+                    <div class="drawer-menu hide-on-pc">
+                        <!-- logo -->
+                        <a href="#" class="menu-logo hide-on-pc">
+                            <img
+                                src="./assets/images/Logo.svg"
+                                alt="CeloBank"
+                            />
+                        </a>
+
+                        <ul id="mobile-nav" class="mobile-nav hide-on-pc"></ul>
+                    </div>
+
                     <!-- logo -->
                     <a href="#" class="logo">
                         <img src="./assets/images/Logo.svg" alt="CeloBank" />
@@ -109,7 +152,10 @@
 
                     <!-- navbar -->
                     <nav class="navbar">
-                        <ul class="navbar__list">
+                        <ul
+                            id="pc-nav"
+                            class="navbar__list hide-on-mobile-tablet"
+                        >
                             <li class="navbar__item navbar__item--active">
                                 <a href="#" class="navbar__link">Home</a>
                             </li>
@@ -126,11 +172,29 @@
                             <li class="navbar__item">
                                 <a href="#blog" class="navbar__link">Blog</a>
                             </li>
+                            <li class="separate"></li>
+                            <li class="navbar__item hide-on-pc">
+                                <a href="#!" class="navbar__link hide-on-pc"
+                                    >Sign in</a
+                                >
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link hide-on-pc"
+                                    >iIgn up</a
+                                >
+                            </li>
                         </ul>
+                        <script>
+                            const pcNav = document.getElementById("pc-nav");
+                            const mobileNav =
+                                document.getElementById("mobile-nav");
+
+                            mobileNav.innerHTML = pcNav.innerHTML;
+                        </script>
                     </nav>
 
                     <!-- header action -->
-                    <div class="header-action">
+                    <div class="header-action hide-on-mobile-tablet">
                         <a href="#!" class="header-action__link">Log in</a>
                         <a href="#!" class="btn header-action__btn">Sign up</a>
                     </div>
@@ -180,7 +244,11 @@
                             />
 
                             <!-- deposite -->
-                            <div class="hero-deposite" data-aos="fade-right" data-aos-duration="3000">
+                            <div
+                                class="hero-deposite"
+                                data-aos="fade-right"
+                                data-aos-duration="3000"
+                            >
                                 <img
                                     src="./assets/icons/download.svg"
                                     alt="download"
@@ -191,8 +259,11 @@
                             </div>
 
                             <!-- fund -->
-                            <div class="hero-fund" data-aos="fade-up"
-                            data-aos-duration="3000">
+                            <div
+                                class="hero-fund"
+                                data-aos="fade-up"
+                                data-aos-duration="3000"
+                            >
                                 <img
                                     src="./assets/icons/security.svg"
                                     alt="security"
@@ -206,9 +277,12 @@
                         </figure>
 
                         <!-- interest -->
-                        <div class="hero-interest" data-aos="flip-left"
-                        data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000">
+                        <div
+                            class="hero-interest"
+                            data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000"
+                        >
                             <p class="hero-interest__text">0%</p>
                             <p class="hero-interest__desc">Interest</p>
                         </div>
@@ -222,7 +296,11 @@
             <section id="products" class="work">
                 <div class="container">
                     <div class="work__inner">
-                        <div class="work__media" data-aos="fade-up-right" data-aos-duration="1500">
+                        <div
+                            class="work__media"
+                            data-aos="fade-up-right"
+                            data-aos-duration="1500"
+                        >
                             <figure class="work__media-wrap">
                                 <div class="work__media-images">
                                     <img
@@ -261,7 +339,11 @@
                             </figure>
                         </div>
 
-                        <section class="work__content" data-aos="fade-left" data-aos-duration="1500">
+                        <section
+                            class="work__content"
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                        >
                             <p class="section-label">Digital Smart Wallet</p>
                             <h2 class="section-heading work__heading">
                                 How It Works
@@ -313,7 +395,11 @@
             <section class="payment">
                 <div class="container">
                     <div class="payment__inner">
-                        <div class="payment__content" data-aos="fade-right" data-aos-duration="1500">
+                        <div
+                            class="payment__content"
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                        >
                             <p class="section-label">Digital Smart Wallet</p>
                             <h2 class="section-heading">
                                 One Card For All Your Payments
@@ -329,7 +415,7 @@
                             <button class="btn section-btn">Get Started</button>
                         </div>
 
-                        <div class="payment__media" >
+                        <div class="payment__media">
                             <figure class="payment__media-wrap">
                                 <img
                                     src="./assets/images/payment-01.png"
@@ -386,7 +472,11 @@
             <section id="features" class="feature">
                 <div class="container">
                     <div class="feature__inner">
-                        <div class="feature__media"  data-aos="fade-up" data-aos-duration="1500">
+                        <div
+                            class="feature__media"
+                            data-aos="fade-up"
+                            data-aos-duration="1500"
+                        >
                             <figure class="feature__media-wrap">
                                 <img
                                     src="./assets/images/feature-media-bg.svg"
@@ -488,7 +578,11 @@
                             </figure>
                         </div>
 
-                        <div class="feature__content" data-aos="fade-left" data-aos-duration="1500">
+                        <div
+                            class="feature__content"
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                        >
                             <p class="section-label">Digital Smart Wallet</p>
                             <h2 class="section-heading">
                                 Transfer and Deposite Your Money Anytime
@@ -512,7 +606,11 @@
             <!-- feedback -->
             <section class="feedback">
                 <div class="container">
-                    <div class="feedback__top"  data-aos="zoom-in" data-aos-duration="1500">
+                    <div
+                        class="feedback__top"
+                        data-aos="zoom-in"
+                        data-aos-duration="1500"
+                    >
                         <p class="section-label feedback__top-label">
                             Our Testimonial
                         </p>
@@ -525,7 +623,11 @@
 
                     <div class="feedback__list">
                         <!-- feedback item 1 -->
-                        <article class="feedback-item"  data-aos="zoom-in" data-aos-duration="1500">
+                        <article
+                            class="feedback-item"
+                            data-aos="zoom-in"
+                            data-aos-duration="1500"
+                        >
                             <section class="feedback-comment">
                                 <div class="feedback-comment__wrap">
                                     <blockquote
@@ -731,7 +833,11 @@
             <!-- blog -->
             <section id="blog" class="blog">
                 <div class="container">
-                    <div class="blog__top" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <div
+                        class="blog__top"
+                        data-aos="zoom-in-up"
+                        data-aos-duration="1500"
+                    >
                         <div class="blog__top-left">
                             <p class="section-label">Our Blog</p>
                             <h2 class="section-heading blog__top-heading">
@@ -746,7 +852,11 @@
                         <button class="btn blog__top-btn">Read All</button>
                     </div>
 
-                    <div class="blog__list" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <div
+                        class="blog__list"
+                        data-aos="zoom-in-up"
+                        data-aos-duration="1500"
+                    >
                         <!-- blog item 1 -->
                         <article class="blog-item">
                             <a href="#!">
@@ -860,29 +970,28 @@
                             class="download__star"
                             data-aos="fade-down-right"
                             data-aos-duration="1500"
-                            />
+                        />
                         <img
                             src="./assets/icons/star.svg"
                             alt="Star"
                             class="download__star"
                             data-aos="fade-up-right"
-
                             data-aos-duration="1500"
-                            />
+                        />
                         <img
                             src="./assets/icons/star.svg"
                             alt="Star"
                             class="download__star"
                             data-aos="fade-down-left"
                             data-aos-duration="1500"
-                            />
+                        />
                         <img
                             src="./assets/icons/star.svg"
                             alt="Star"
                             class="download__star"
                             data-aos="fade-up-left"
                             data-aos-duration="1500"
-                            />
+                        />
                         <section class="download__content">
                             <p class="section-label download__label">Our App</p>
                             <h2 class="section-heading download__heading">
@@ -1030,6 +1139,6 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
-          </script>
+        </script>
     </body>
 </html>
