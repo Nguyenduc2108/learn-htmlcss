@@ -86,19 +86,19 @@ a {
     padding: 52px 0 8px 0;
 }
 
-.navbar ul {
+.navbar .pc-menu {
     display: flex;
     margin-left: auto;
 }
 
-.navbar ul a {
+.navbar .pc-menu a {
     padding: 8px 19.5px;
     color: #2f3a3b;
     font-size: 1.6rem;
     font-weight: 400;
 }
 
-.navbar ul a:hover {
+.navbar .pc-menu a:hover {
     color: #2f3a3b;
     text-shadow: 1px 0 0 currentColor;
 }

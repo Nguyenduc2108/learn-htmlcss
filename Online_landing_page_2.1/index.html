@@ -94,15 +94,46 @@
         <!-- Style -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <header class="header fixed">
             <div class="main-content">
                 <nav class="navbar">
+                    <!-- header menu -->
+                    <label for="menu-checkbox" class="header-menu hide-on-pc">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
+                    <input
+                        type="checkbox"
+                        name=""
+                        id="menu-checkbox"
+                        class="menu-checkbox"
+                        hidden
+                    />
+
+                    <label for="menu-checkbox" class="overlay"></label>
+
+                    <div class="drawer-menu hide-on-pc">
+                        <a href="#" class="mobile-logo">
+                            <img src="./assets/image/Logo.svg" alt="Besnik." />
+                        </a>
+                        <ul id="mobile-menu" class="mobile-menu"></ul>
+                    </div>
+
                     <a href="#" class="logo">
                         <img src="./assets/image/Logo.svg" alt="Besnik." />
                     </a>
-                    <ul>
+
+                    <ul id="pc-menu" class="pc-menu">
                         <li>
                             <a href="#">Home</a>
                         </li>
@@ -118,8 +149,23 @@
                         <li>
                             <a href="#contact">Contact</a>
                         </li>
+                        <li class="separate show-on-mobile"></li>
+                        <li>
+                            <a href="#!" class="show-on-mobile">Sign in</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="show-on-mobile">Sign up</a>
+                        </li>
                     </ul>
-                    <div class="actions">
+
+                    <script>
+                        const mobileMenu =
+                            document.getElementById("mobile-menu");
+                        const pcMenu = document.getElementById("pc-menu");
+                        mobileMenu.innerHTML = pcMenu.innerHTML;
+                    </script>
+
+                    <div class="actions hide-on-mobile">
                         <a href="#!" class="btn-link">Sign in</a>
                         <a href="#!" class="btn action-btn">Sign up</a>
                     </div>
@@ -148,7 +194,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="image">
+                        <div class="image hide-on-mobile-tablet">
                             <img
                                 src="./assets/image/hero-image.jpg"
                                 alt="hero-image"
@@ -317,7 +363,7 @@
                                 Check out our most poular courses that suit for
                                 you. Here you can find your favourite one.
                             </p>
-                            <p class="view">View All Courses</p>
+                            <p class="view hide-on-mobile">View All Courses</p>
                         </div>
                     </div>
                     <div class="list">
@@ -396,6 +442,10 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="mobile-view-all">
+                        <a href="#!" class="btn">View All Courses</a>
+                    </div>
                 </div>
             </div>
 
@@ -473,7 +523,7 @@
         <footer class="footer">
             <div class="main-content">
                 <div class="row">
-                    <a href="#!" class="logo">
+                    <a href="#!" class="logo hide-on-mobile-tablet">
                         <img src="./assets/image/Logo.svg" alt="besnik." />
                     </a>
                     <div class="col">
