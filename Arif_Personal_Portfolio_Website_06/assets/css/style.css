@@ -246,3 +246,36 @@ button {
     bottom: 0;
     right: 0;
 }
+
+/* client */
+.client {
+    margin-top: 100px;
+}
+
+.client__heading {
+    position: relative;
+    width: 340px;
+    margin: unset;
+    padding-left: 99px;
+    text-align: left;
+    font-size: 4.2rem;
+    font-weight: 500;
+    line-height: 1.19;
+    letter-spacing: -1.68px;
+}
+
+.client__heading::before {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    content: "";
+    width: 86px;
+    height: 2px;
+    background: var(--secondary-color);
+}
+
+.client__app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 34px 60px;
+}

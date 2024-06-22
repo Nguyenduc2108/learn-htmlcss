@@ -178,6 +178,34 @@
         width: 543.709px;
         height: 402.145px;
     }
+
+    /* client */
+
+    .client__inner {
+        justify-content: center;
+    }
+
+    .client__heading {
+        width: 169px;
+        padding-left: 0;
+        font-size: 2.8rem;
+        font-weight: 600;
+        line-height: 1.21;
+        letter-spacing: -1.12px;
+        text-align: center;
+    }
+
+    .client__heading::before {
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 48px;
+    }
+
+    .client__app {
+        margin-top: 42px;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* Tablet */
@@ -187,6 +215,35 @@
     }
     .show-on-mobile {
         display: none;
+    }
+
+    .hero__inner {
+        align-items: center;
+    }
+
+    .hero__heading {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero__desc {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero__decor--large {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero__row,
+    .hero__bottom {
+        justify-content: center;
+    }
+
+    .client__app {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
