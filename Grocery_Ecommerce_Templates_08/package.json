@@ -1,0 +1,14 @@
+{
+  "name": "grocery_ecommerce_templates_08",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss:assets/css -w",
+    "minify": "sass scss:assets/css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
