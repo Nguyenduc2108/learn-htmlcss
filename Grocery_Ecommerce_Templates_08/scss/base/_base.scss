@@ -20,6 +20,8 @@ a {
     text-decoration: none;
 }
 
+a,
+img,
 input,
 button,
 select,
@@ -27,6 +29,7 @@ textarea {
     color: inherit;
     font-family: inherit;
     font-size: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button {
