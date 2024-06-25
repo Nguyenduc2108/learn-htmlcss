@@ -10,7 +10,7 @@ html {
     --top-atc-group-shadow: rgba(237, 237, 246, 0.2);
     --top-atc-group-separate: #ededf6;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }

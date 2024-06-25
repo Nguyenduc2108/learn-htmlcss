@@ -10,7 +10,7 @@ html.dark {
     --top-atc-group-shadow: rgba(0, 0, 0, 0.2);
     --top-atc-group-separate: #ededf6;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
 
