@@ -6,6 +6,9 @@ html {
 
     --body-bg-color: #f6f6f6;
     --header-bg-color: #eee;
+
+    --footer-bg-color: var(--header-bg-color);
+
     --top-atc-group-bg-color: #fff;
     --top-atc-group-shadow: rgba(237, 237, 246, 0.2);
     --top-atc-group-separate: #ededf6;
@@ -48,4 +51,7 @@ html {
     --filter-form-shadow: rgba(200, 200, 200, 0.4);
 
     --filter-form-tag-bg: #f8f8fb;
+
+    //Auth
+    --auth-content-bg: #fff;
 }
