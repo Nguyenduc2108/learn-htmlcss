@@ -28,16 +28,21 @@ input,
 button,
 select,
 textarea {
+    padding: 0;
+    border: none;
+    outline: none;
+
     color: inherit;
     font-family: inherit;
     font-size: inherit;
-    outline: none;
     -webkit-tap-highlight-color: transparent;
 }
 
+input {
+    background: transparent;
+}
+
 button {
-    padding: 0;
-    border: none;
     background: transparent;
     cursor: pointer;
 }
