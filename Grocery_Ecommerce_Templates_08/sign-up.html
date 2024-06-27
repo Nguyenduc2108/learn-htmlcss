@@ -29,9 +29,9 @@
                 <!-- Auth intro -->
                 <div class="auth__intro">
                     <!-- Logo -->
-                    <a href="#" class="logo auth__intro-logo d-none d-md-flex">
+                    <a href="/" class="logo auth__intro-logo d-none d-md-flex">
                         <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
-                        <h1 class="logo__title">grocerymart</h1>
+                        <h2 class="logo__title">grocerymart</h2>
                     </a>
 
                     <img src="./assets/images/auth/intro.svg" alt="" class="auth__intro-img" />
@@ -45,9 +45,9 @@
                 <div id="auth-content" class="auth__content hide">
                     <div class="auth__content-inner">
                         <!-- Logo -->
-                        <a href="#" class="logo">
+                        <a href="/" class="logo">
                             <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
-                            <h1 class="logo__title">grocerymart</h1>
+                            <h2 class="logo__title">grocerymart</h2>
                         </a>
 
                         <h1 class="auth__heading">Sign Up</h1>
@@ -55,7 +55,15 @@
                         <form action="./index-logined.html" class="form auth__form">
                             <div class="form__group">
                                 <div class="form__text-input">
-                                    <input type="email" name="" id="" placeholder="Email" class="form__input" required />
+                                    <input
+                                        type="email"
+                                        name=""
+                                        id=""
+                                        placeholder="Email"
+                                        class="form__input"
+                                        value="admin@grocerymart.com"
+                                        required
+                                    />
                                     <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
                                     <img src="./assets/icons/error-message.svg" alt="" class="form__input-icon-error" />
                                 </div>
@@ -70,6 +78,7 @@
                                         id=""
                                         placeholder="Password"
                                         class="form__input"
+                                        value="11111111"
                                         required
                                         minlength="6"
                                     />
@@ -87,6 +96,7 @@
                                         id=""
                                         placeholder="Confirm Password"
                                         class="form__input"
+                                        value="11111111"
                                         required
                                         minlength="6"
                                     />
@@ -107,7 +117,7 @@
                             <div class="form__group auth__btn-group">
                                 <button class="btn btn--primary auth__btn form__submit-btn">Sign Up</button>
                                 <button class="btn btn--outline auth__btn btn--no-marin">
-                                    <img src="./assets/icons/google.svg" alt="" class="btn__icon" />
+                                    <img src="./assets/icons/google.svg" alt="" class="btn__icon icon" />
                                     Sign in with Google
                                 </button>
                             </div>

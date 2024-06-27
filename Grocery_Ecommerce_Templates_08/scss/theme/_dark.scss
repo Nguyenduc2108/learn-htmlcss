@@ -21,9 +21,11 @@ html.dark {
     // Dropdown
     --dropdown-bg-color: #2f3441;
     --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-    --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(9%) saturate(1355%) hue-rotate(186deg) brightness(97%) contrast(90%);
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(9%) saturate(1355%) hue-rotate(186deg) brightness(97%)
+        contrast(90%);
     --top-menu-border-color: #171c28;
-    --menu-column-icon-color: brightness(0) saturate(100%) invert(98%) sepia(10%) saturate(380%) hue-rotate(181deg) brightness(100%) contrast(98%);
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(98%) sepia(10%) saturate(380%) hue-rotate(181deg) brightness(100%)
+        contrast(98%);
 
     //Sidebar
     --sidebar-bg: #292e39;
@@ -48,4 +50,13 @@ html.dark {
 
     --filter-form-tag-bg: #171c28;
     --filter-form-arrow: var(--dropdown-arrow-color);
+
+    //Auth
+    --auth-content-bg: #292e39;
+    --auth-intro-bg: #171c28;
+    --auth-intro-text-color: #b9babe;
+    --auth-heading-color: #b9babe;
+
+    //Form
+    --form-placeholder-color: #b9babe;
 }
