@@ -18,6 +18,11 @@ html {
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
 
+    //Header acton dropdown
+    --header-action-dropdown-bg: #fff;
+    --header-action-dropdown-shadow: rgba(200, 200, 200, 0.4);
+    --header-action-dropdown-border-color: #d2d1d6;
+
     // Dropdown
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
@@ -87,4 +92,11 @@ html {
 
     //Review card
     --review-card-bg: #fafafd;
+
+    @include abstracts.screen(md) {
+        --review-card-bg: #fff;
+    }
+
+    //Text content
+    --text-content-hr-bg: #ebebeb;
 }
