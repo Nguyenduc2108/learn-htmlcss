@@ -1513,6 +1513,8 @@ html {
 }
 
 .header {
+  position: relative;
+  z-index: 2;
   background: var(--header-bg-color);
 }
 @media (max-width: 991.98px) {
@@ -2820,7 +2822,7 @@ html {
   }
 }
 .form__dialog-heading {
-  padding: 14px;
+  padding: 20px;
   font-size: 1.8rem;
   font-weight: 600;
   text-align: center;
@@ -2830,7 +2832,7 @@ html {
   position: absolute;
   top: 0;
   right: 4px;
-  padding: 2px 18px;
+  padding: 10px 18px;
 }
 .form__search {
   display: flex;
@@ -2851,12 +2853,15 @@ html {
 }
 @media (max-width: 991.98px) {
   .form__search {
-    height: 42px;
+    height: 48px;
+  }
+  .form__search-icon {
+    width: 20px;
   }
 }
 @media (max-width: 575.98px) {
   .form__search {
-    margin: 10px 20px 0;
+    margin: 10px 30px 0;
     padding: 0 14px;
     border: 1px solid #9e9da8;
     border-radius: 10px;
@@ -2867,6 +2872,12 @@ html {
   margin-top: 10px;
   overflow-y: auto;
   overscroll-behavior: contain;
+}
+@supports (-webkit-touch-callout: none) {
+  .form__options-list {
+    min-height: -webkit-fill-available;
+    padding-bottom: 300px;
+  }
 }
 .form__option {
   padding: 8px 20px;
@@ -2882,7 +2893,8 @@ html {
 }
 @media (max-width: 991.98px) {
   .form__option {
-    padding: 14px 20px;
+    padding: 18px 30px;
+    font-size: 1.6rem;
   }
 }
 .form__error {
@@ -3075,7 +3087,7 @@ html {
   flex: 1;
   height: 100%;
   padding-left: 15px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 142.857%;
 }
